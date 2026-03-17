@@ -26,9 +26,21 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
 
+It's a simple number guessing game built with Streamlit. The individual guesses a secret number which is chosen by the app and receives a hints which says either Too High or Too low until they find the secret or run out of attempts. 
+
+- [ ] Detail which bugs you found.
+* The game forgot the secret number every time you clicked a button.
+* If you guessed too high, it said "too low" and vice versa. 
+* All the game rules were shoved into one file, making it hard to fix.
+* The screen didn;'t show the correct number range for the difficulty level.
+
+- [ ] Explain what fixes you applied.
+* Used 'st.session_state' to store game state (secret, attempts, score, history, difficulty) and only  initialize/reset the secret when starting a new game or when the difficulty changes.
+* Fixed the check_guess logic. Now, if you guess is too high, it will correctly tell you to go lower and vice versa. 
+* Moved the brain of the game into logic_utils.py. This keeps the brain code clean and easy to test.
+* I ran the pytest to verify the math works perfectly. I kept adjusting the code until every test turned green. 
+* Then after added clear text showing the number range and ensured "New Game" wipes the bored for a fresh start.
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]

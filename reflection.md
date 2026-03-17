@@ -4,38 +4,19 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 1. What was broken when you started?
 
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
-
----
+The game had a bad memory and picked a new secret number everytime I clicked a button. The hints were also backwards, telling me to go higher when I was already too high. Many of the game's math rules were unfinished or messy, which caused the game to crash or act weird. 
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-- Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-
----
+I used the AI to guide me explain how to give the game a memory and to help fix the broken hints. It was helpful when it showed me how to save the secret number, but sometimes it suggested code that didn;t match the rest of the game. I treated the AI like a helper, I listened to the ideas but always tested them myself to make sure they actually wworked. 
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
-- Did AI help you design or understand any tests? How?
-
----
-
+I knew a bug was fixed when the pytest tool gave me a green pass and the game felt right when I played it. I used the developer debug info to cheat and see the secret number, which helped me confirm the hints were finally accurate. The AI helped me write the fixes but overall I was the one who ran the tests to prove they were correct.
 ## 4. What did you learn about Streamlit and state?
 
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-
----
+I learned that Streamlit restarts the whole script everytime you click anything. Because of this, I noticed normal variables get erased instantly. I learned to use st.session_state as a digital notebook to save important info like the secret number and score so the game doesn't forget them.
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+In the future, I will keep my brain code separate from my display code so it's easier to fix. This project taught me that while AI is fast builder, I need to be the supervisor who double checks everything with tests. I won't just copy and paste, I'll test small pieces as I go. 
